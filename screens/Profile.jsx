@@ -124,7 +124,7 @@ const Profile = ({ navigation, route }) => {
         }}
       >
 
-        <Text style={{ fontSize: 20, margin: 10 }}>Sign Up</Text>
+        <Text style={{ fontSize: 20, margin: 10 }}>Profile</Text>
         {/* <Avatar.Image
                 size={100}
                 source={{ uri: avatar ? avatar : null }}
@@ -153,13 +153,6 @@ const Profile = ({ navigation, route }) => {
             // value={city}
             // onChangeText={setCity}
           />
-          <TextInput
-            secureTextEntry
-            style={Styles.input}
-            placeholder="Password"
-            // value={password}
-            // onChangeText={setPassword}
-          />
           {/* <TextInput
                     secureTextEntry
                     style={Styles.input}
@@ -174,6 +167,18 @@ const Profile = ({ navigation, route }) => {
         <Button style={Styles.btn} >
           <Text style={{ color: "#fff" }}>Update</Text>
         </Button>
+        <TouchableOpacity onPress={() => navigation.navigate("changePassword")}>
+          <Text
+            style={{
+              color: "rgb(0, 110, 0)",
+              // color: "",
+              height: 30,
+              margin: 20,
+            }}
+          >
+            Change Password
+          </Text>
+        </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("")}>
           <Text
             style={{

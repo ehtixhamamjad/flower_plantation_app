@@ -17,11 +17,12 @@ import { Dialog, Button } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask, loadUser } from "../redux/action";
 import { SelectList } from "react-native-dropdown-select-list";
-import Header from '../components/Header'
-
+import { useNavigation } from "@react-navigation/native"
+import { Appbar } from "react-native-paper";
 
 const DeviceWidth = Dimensions.get("window").width;
-const Home = ({ navigation }) => {
+const Home = () => {
+  const navigation = useNavigation()
   // const { user } = useSelector(state => state.auth)
 
   // const dispatch = useDispatch();
@@ -72,8 +73,19 @@ const Home = ({ navigation }) => {
             save="value"
     />
         </View> */}
-                    <Header />
-
+                         <Appbar.Header
+        style={{
+          backgroundColor: "#fff",
+        }}
+      >
+        <Appbar.Content 
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-around",
+        }}
+        color="#1EA65C" title="Main Menu" />
+      </Appbar.Header>
+        <ScrollView>
       <View
         style={{
           flexDirection: "row",
@@ -95,6 +107,7 @@ const Home = ({ navigation }) => {
               justifyContent: "center",
               flexDirection: "column",
             }}
+            onPress={() => navigation.navigate("flowerInYourArea")}
           >
             <View
               style={{
@@ -123,6 +136,7 @@ const Home = ({ navigation }) => {
               justifyContent: "center",
               flexDirection: "column",
             }}
+            onPress={() => navigation.navigate("viewAllFlowers")}
           >
             <View
               style={{
@@ -151,6 +165,7 @@ const Home = ({ navigation }) => {
               justifyContent: "center",
               flexDirection: "column",
             }}
+            onPress={() => navigation.navigate("nurseryInYourArea")}
           >
             <View
               style={{
@@ -179,6 +194,7 @@ const Home = ({ navigation }) => {
               justifyContent: "center",
               flexDirection: "column",
             }}
+            onPress={() => navigation.navigate("yourFuturePlans")}
           >
             <View
               style={{
@@ -198,6 +214,7 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
+      </ScrollView>
     </>
 
     // <>

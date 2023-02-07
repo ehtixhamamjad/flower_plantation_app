@@ -18,7 +18,7 @@ const Footer = () => {
             <TouchableOpacity onPress={() => navigation.navigate("home")}>
                 <Icon name="home" size={30} color="#1EA65C" />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate("profile")}>
+            <TouchableOpacity onPress={() => navigation.navigate("camera")}>
                 <Icon name="camera" size={30} color="#1EA65C" />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate("profile")}>

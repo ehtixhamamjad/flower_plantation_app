@@ -55,6 +55,15 @@ const ResetPassword = ({ navigation }) => {
                     value={newPassword}
                     onChangeText={setNewPassword}
                 />
+
+                
+<TextInput
+                    secureTextEntry
+                    style={Styles.input}
+                    placeholder="Confirm Password"
+                    // value={newPassword}
+                    // onChangeText={setNewPassword}
+                />
             </View>
 
             <Button
