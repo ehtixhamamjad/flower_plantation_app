@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const serverUrl = "https://filthy-shift-tuna.cyclic.app/api/v1";
+const serverUrl = "https://tam-capybara.cyclic.app/api/v1";
 
 export const login = (email, password) => async (dispatch) => {
   try {
